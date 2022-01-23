@@ -2,6 +2,8 @@
 
 This is the implement of the paper "OntoProtein: Protein Pretraining With Ontology Embedding". OntoProtein is an effective method that make use of structure in GO (Gene Ontology) into text-enhanced protein pre-training model.
 
+<img src="resources/img/model.png" style="zoom:70%;" />
+
 ## Quick links
 
 * [Overview](#overview)
@@ -19,7 +21,7 @@ This is the implement of the paper "OntoProtein: Protein Pretraining With Ontolo
 ## Overview
 <span id="overview"></span>
 
-<img src="resources/img/model.png" style="zoom:70%;" />
+<img src="resources/img/main.jpg" style="zoom:70%;" />
 
 In this work we present OntoProtein, a knowledge-enhanced protein language model that jointly optimize the KE and MLM objectives, which bring excellent improvements to a wide range of protein tasks. And we introduce **ProteinKG25**, a new large-scale KG dataset, promting the research on protein language pre-training.
 
@@ -39,7 +41,7 @@ python3.8 / pytorch 1.9 / transformer 4.5.1+ / deepspeed 0.5.1/ lmdb /
 <span id="environment-for-protein-related-tasks"></span>
 python3.8 / pytorch 1.9 / transformer 4.5.1+ / lmdb
 
-**Note: ** environments configurations of some baseline models or methods in our experiments, e.g. BLAST, DeepGraphGO, we provide related links to configurate as follows:
+**Note:** environments configurations of some baseline models or methods in our experiments, e.g. BLAST, DeepGraphGO, we provide related links to configurate as follows:
 
 [BLAST](https://www.ncbi.nlm.nih.gov/books/NBK569861/) / [Interproscan](https://github.com/ebi-pf-team/interproscan) / [DeepGraphGO](https://github.com/yourh/DeepGraphGO) / [GNN-PPI](https://github.com/lvguofeng/GNN_PPI)
 
@@ -95,30 +97,30 @@ You can pre-training your own OntoProtein based above pretraining dataset. We pr
 
 ### Running examples
 
-The shell files of training and evaluation for every task are provided in `task/` , and could directly run.
+The shell files of training and evaluation for every task are provided in `script/` , and could directly run.
 
-Also, you can utilize the running codes `main.py` , and write your shell files according to your need:
+Also, you can utilize the running codes `run_downstream.py` , and write your shell files according to your need:
 
-- `main.py`: support `{ss3, ss8, contact, remote_homology, fluorescence, stability}` tasks;
+- `run_downstream.py`: support `{ss3, ss8, contact, remote_homology, fluorescence, stability}` tasks;
 
 #### Training models
 
-Running shell files: `bash task/run_{task}.sh`, and the contents of shell files are as follow:
+Running shell files: `bash script/run_{task}.sh`, and the contents of shell files are as follow:
 
 ```shell
-nohup sh run_main.sh \
-      --model ./model/ss3/ProtBertModel \
-      --output_file ss3-ProtBert \
-      --task_name ss3 \
-      --do_train True \
-      --epoch 5 \
-      --optimizer AdamW \
-      --per_device_batch_size 2 \
-      --gradient_accumulation_steps 8 \
-      --eval_step 100 \
-      --eval_batchsize 4 \
-      --warmup_ratio 0.08 \
-      --frozen_bert False >./task/result/ss3-ProtBert.out 2>&1
+sh run_main.sh \
+    --model ./model/ss3/ProtBertModel \
+    --output_file ss3-ProtBert \
+    --task_name ss3 \
+    --do_train True \
+    --epoch 5 \
+    --optimizer AdamW \
+    --per_device_batch_size 2 \
+    --gradient_accumulation_steps 8 \
+    --eval_step 100 \
+    --eval_batchsize 4 \
+    --warmup_ratio 0.08 \
+    --frozen_bert False
 ```
 
 You can set more detailed parameters in run_main.sh. The details of main.sh are as follows:
@@ -129,7 +131,7 @@ SEED=3
 DATA_DIR=data/datasets
 OUTPUT_DIR=data/output_data/$TASK_NAME-$SEED-$OI
 
-python main.py \
+python run_downstream.py \
   --task_name $TASK_NAME \
   --data_dir $DATA_DIR \
   --do_train $DO_TRAIN \
