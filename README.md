@@ -1,41 +1,42 @@
 # OntoProtein
 
-This is the implement of the ICLR 2022 paper "OntoProtein: Protein Pretraining With Gene Ontology Embedding". OntoProtein is an effective method that make use of structure in GO (Gene Ontology) into text-enhanced protein pre-training model.
+This is the implement of the paper "OntoProtein: Protein Pretraining With Ontology Embedding". OntoProtein is an effective method that make use of structure in GO (Gene Ontology) into text-enhanced protein pre-training model.
 
 ## Quick links
 
 * [Overview](#overview)
 * [Requirements](#requirements)
-  * [Environment for pre-training data generation](#environment for pre-training data generation)
-  * [Environmen for OntoProtein pre-training](#environment for ontoprotein pre-training)
-  * [Environment for protein-related tasks](#environment for protein-related tasks)
-* [Data preparation](#data preparation)
-  * [Pre-training data](#pre-training data)
-  * [Downstream task data](#downstream task data)
-* [Protein pre-training model](#protein pre-training model)
-* [Usage for protein-related tasks](#usage for protein-related tasks)
+  * [Environment for pre-training data generation](#environment-for-pre-training-data-generation)
+  * [Environmen for OntoProtein pre-training](#environment-for-ontoprotein-pre-training)
+  * [Environment for protein-related tasks](#environment-for-protein-related-tasks)
+* [Data preparation](#data-preparation)
+  * [Pre-training data](#pre-training-data)
+  * [Downstream task data](#downstream-task-data)
+* [Protein pre-training model](#protein-pre-training-model)
+* [Usage for protein-related tasks](#usage-for-protein-related-tasks)
 * [Citation](#citation)
 
 ## Overview
+<span id="overview"></span>
 
 <img src="resources/img/model.png" style="zoom:70%;" />
 
 In this work we present OntoProtein, a knowledge-enhanced protein language model that jointly optimize the KE and MLM objectives, which bring excellent improvements to a wide range of protein tasks. And we introduce **ProteinKG25**, a new large-scale KG dataset, promting the research on protein language pre-training.
 
 ## Requirements
-
+<span id="requirements"></span>
 To run our code, please install dependency packages for related steps.
 
 ### Environment for pre-training data generation
-
+<span id="environment-for-pre-training-data-generation"></span>
 python3.8 / biopython 1.37 / goatools
 
 ### Environment for OntoProtein pre-training
-
+<span id="environment-for-ontoprotein-pre-training"></span>
 python3.8 / pytorch 1.9 / transformer 4.5.1+ / deepspeed 0.5.1/ lmdb / 
 
 ### Environment for protein-related tasks
-
+<span id="environment-for-protein-related-tasks"></span>
 python3.8 / pytorch 1.9 / transformer 4.5.1+ / lmdb
 
 **Note: ** environments configurations of some baseline models or methods in our experiments, e.g. BLAST, DeepGraphGO, we provide related links to configurate as follows:
@@ -43,11 +44,11 @@ python3.8 / pytorch 1.9 / transformer 4.5.1+ / lmdb
 [BLAST](https://www.ncbi.nlm.nih.gov/books/NBK569861/) / [Interproscan](https://github.com/ebi-pf-team/interproscan) / [DeepGraphGO](https://github.com/yourh/DeepGraphGO) / [GNN-PPI](https://github.com/lvguofeng/GNN_PPI)
 
 ## Data preparation
-
+<span id="data-preparation"></span>
 For pretraining OntoProtein, fine-tuning on protein-related tasks and inference, we provide acquirement approach of related data.
 
 ### Pre-training data
-
+<span id="pre-training-data"></span>
 To incorporate Gene Ontology knowledge into language models and train OntoProtein, we construct ProteinKG25, a large-scale KG dataset with aligned descriptions and protein sequences respectively to GO terms and protein entities. There have two approach to acquire the pre-training data: 1) download our prepared data **ProteinKG25**, 2) generate your own pre-training data.
 
 ![times](resources/img/times.png)
@@ -82,14 +83,15 @@ python tools/gen_onto_protein_data.py
 ```
 
 ### Downstream task data
-
+<span id="downstream-task-data"></span>
 Our experiments involved with several protein-related downstream tasks. [[Download datasets]](https://drive.google.com/file/d/1elanRIPuYEMgY749ZwrlBPRKOTPaoRQ_/view)
 
 ## Protein pre-training model
-
+<span id="protein-pre-training-model"></span>
 You can pre-training your own OntoProtein based above pretraining dataset. We provide the script `bash script/run_pretrain.sh` to run pre-training. And the detailed arguments are all listed in `src/training_args.py`, you can set pre-training hyperparameters to your  need.
 
 ## Usage for protein-related tasks
+<span id="usage-for-protein-related-tasks"></span>
 
 ### Running examples
 
