@@ -21,9 +21,9 @@ This is the implement of the paper "OntoProtein: Protein Pretraining With Ontolo
 ## Overview
 <span id="overview"></span>
 
-<img src="resources/img/main.jpg" style="zoom:70%;" />
-
 In this work we present OntoProtein, a knowledge-enhanced protein language model that jointly optimize the KE and MLM objectives, which bring excellent improvements to a wide range of protein tasks. And we introduce **ProteinKG25**, a new large-scale KG dataset, promting the research on protein language pre-training.
+
+<img src="resources/img/main.jpg" style="zoom:50%;" />
 
 ## Requirements
 <span id="requirements"></span>
