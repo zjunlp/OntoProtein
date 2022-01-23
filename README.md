@@ -2,7 +2,7 @@
 
 This is the implement of the paper "OntoProtein: Protein Pretraining With Ontology Embedding". OntoProtein is an effective method that make use of structure in GO (Gene Ontology) into text-enhanced protein pre-training model.
 
-<img src="resources/img/model.png" style="zoom:70%;" />
+<img src="resources/img/model.png" style="zoom:50%;" />
 
 ## Quick links
 
@@ -23,7 +23,7 @@ This is the implement of the paper "OntoProtein: Protein Pretraining With Ontolo
 
 In this work we present OntoProtein, a knowledge-enhanced protein language model that jointly optimize the KE and MLM objectives, which bring excellent improvements to a wide range of protein tasks. And we introduce **ProteinKG25**, a new large-scale KG dataset, promting the research on protein language pre-training.
 
-<img src="resources/img/main.jpg" style="zoom:50%;" />
+<img src="resources/img/main.jpg" style="zoom:30%;" />
 
 ## Requirements
 <span id="requirements"></span>
