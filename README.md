@@ -1,6 +1,6 @@
 # OntoProtein
 
-This is the implement of the paper "OntoProtein: Protein Pretraining With Ontology Embedding". OntoProtein is an effective method that make use of structure in GO (Gene Ontology) into text-enhanced protein pre-training model.
+This is the implement of the paper "[OntoProtein: Protein Pretraining With Ontology Embedding]()". OntoProtein is an effective method that make use of structure in GO (Gene Ontology) into text-enhanced protein pre-training model.
 
 <img src="resources/img/model.png" style="zoom:50%;" />
 
