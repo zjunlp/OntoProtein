@@ -154,3 +154,28 @@ python run_downstream.py \
 ```
 
 **Notice: the best checkpoint is saved in** `OUTPUT_DIR/`.
+
+## How to Cite
+```
+@article{DBLP:journals/corr/abs-2201-11147,
+  author    = {Ningyu Zhang and
+               Zhen Bi and
+               Xiaozhuan Liang and
+               Siyuan Cheng and
+               Haosen Hong and
+               Shumin Deng and
+               Jiazhang Lian and
+               Qiang Zhang and
+               Huajun Chen},
+  title     = {OntoProtein: Protein Pretraining With Gene Ontology Embedding},
+  journal   = {CoRR},
+  volume    = {abs/2201.11147},
+  year      = {2022},
+  url       = {https://arxiv.org/abs/2201.11147},
+  eprinttype = {arXiv},
+  eprint    = {2201.11147},
+  timestamp = {Wed, 02 Feb 2022 15:00:01 +0100},
+  biburl    = {https://dblp.org/rec/journals/corr/abs-2201-11147.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+```
