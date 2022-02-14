@@ -57,7 +57,7 @@ To incorporate Gene Ontology knowledge into language models and train OntoProtei
 
 #### Download released data
 
-We have released our prepared data **ProteinKG25** in [Google Drive](https://drive.google.com/file/d/1oVUVg44nhbgdFIxMp6Rq07HXrhIi7tsx/view?usp=sharing).
+We have released our prepared data **ProteinKG25** in [Google Drive](https://drive.google.com/file/d/1iTC2-zbvYZCDhWM_wxRufCvV6vvPk8HR/view).
 
 The whole compressed package includes following files:
 
