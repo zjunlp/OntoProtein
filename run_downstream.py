@@ -5,10 +5,10 @@ from dataclasses import dataclass, field
 from transformers import HfArgumentParser, TrainingArguments, BertTokenizerFast, set_seed, Trainer
 import logging
 
-from src.models import model_mapping, load_adam_optimizer_and_scheduler
-from src.datasets import dataset_mapping, output_modes_mapping
-from src.metrics import build_compute_metrics_fn
-from src.trainer import OntoProteinTrainer
+from src.benchmark.models import model_mapping, load_adam_optimizer_and_scheduler
+from src.benchmark.datasets import dataset_mapping, output_modes_mapping
+from src.benchmark.metrics import build_compute_metrics_fn
+from src.benchmark.trainer import OntoProteinTrainer
 
 import warnings
 warnings.filterwarnings("ignore")
