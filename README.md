@@ -159,25 +159,10 @@ python run_downstream.py \
 
 ## How to Cite
 ```
-@article{DBLP:journals/corr/abs-2201-11147,
-  author    = {Ningyu Zhang and
-               Zhen Bi and
-               Xiaozhuan Liang and
-               Siyuan Cheng and
-               Haosen Hong and
-               Shumin Deng and
-               Jiazhang Lian and
-               Qiang Zhang and
-               Huajun Chen},
-  title     = {OntoProtein: Protein Pretraining With Gene Ontology Embedding},
-  journal   = {CoRR},
-  volume    = {abs/2201.11147},
-  year      = {2022},
-  url       = {https://arxiv.org/abs/2201.11147},
-  eprinttype = {arXiv},
-  eprint    = {2201.11147},
-  timestamp = {Wed, 02 Feb 2022 15:00:01 +0100},
-  biburl    = {https://dblp.org/rec/journals/corr/abs-2201-11147.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@article{zhang2022ontoprotein,
+  title={OntoProtein: Protein Pretraining With Gene Ontology Embedding},
+  author={Zhang, Ningyu and Bi, Zhen and Liang, Xiaozhuan and Cheng, Siyuan and Hong, Haosen and Deng, Shumin and Lian, Jiazhang and Zhang, Qiang and Chen, Huajun},
+  journal={arXiv preprint arXiv:2201.11147},
+  year={2022}
 }
 ```
