@@ -276,8 +276,8 @@ def create_onto_protein_data(
     relation2id_handle.close()
 
 if __name__ == '__main__':
-    create_goa_triplet('data/original_data/goa_uniprot_all.gaf', 'data/onto_protein_data/protein_go_triplet', 'data/onto_protein_data/protein_seq_map.txt')
     create_uniprot_data('data/original_data/uniprot_sprot.dat', 'data/onto_protein_data/protein_seq_map.txt')
+    create_goa_triplet('data/original_data/goa_uniprot_all.gaf', 'data/onto_protein_data/protein_go_triplet', 'data/onto_protein_data/protein_seq_map.txt')
 
     create_go_data(
        fin_path='data/original_data/go.obo', 
