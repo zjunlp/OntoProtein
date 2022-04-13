@@ -2,7 +2,7 @@
 
 This is the implement of the paper "[OntoProtein: Protein Pretraining With Ontology Embedding](https://arxiv.org/pdf/2201.11147.pdf)". OntoProtein is an effective method that make use of structure in GO (Gene Ontology) into text-enhanced protein pre-training model.
 
-<img src="resources/img/model.png" style="zoom:50%;" />
+<div align=center><img src="resources/img/model.png" width="80%" height="80%" /></div>
 
 ## Quick links
 
@@ -23,7 +23,7 @@ This is the implement of the paper "[OntoProtein: Protein Pretraining With Ontol
 
 In this work we present OntoProtein, a knowledge-enhanced protein language model that jointly optimize the KE and MLM objectives, which bring excellent improvements to a wide range of protein tasks. And we introduce **ProteinKG25**, a new large-scale KG dataset, promting the research on protein language pre-training.
 
-<img src="resources/img/main.jpg" style="zoom:30%;" />
+<div align=center><img src="resources/img/main.jpg" width="60%" height="60%" /></div>
 
 ## Requirements
 <span id="requirements"></span>
@@ -90,7 +90,7 @@ Our experiments involved with several protein-related downstream tasks. [[Downlo
 
 ## Protein pre-training model
 <span id="protein-pre-training-model"></span>
-You can pre-training your own OntoProtein based above pretraining dataset. We provide the script `bash script/run_pretrain.sh` to run pre-training. And the detailed arguments are all listed in `src/training_args.py`, you can set pre-training hyperparameters to your  need.
+You can pre-training your own OntoProtein based above pretraining dataset. Before pretraining OntoProtein, you need to download two pretrained model, respectively [ProtBERT](https://huggingface.co/Rostlab/prot_bert) and [PubMedBERT](https://huggingface.co/microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext) and save them in `data/model_data/ProtBERT` and `data/model_data/PubMedBERT`. We provide the script `bash script/run_pretrain.sh` to run pre-training. And the detailed arguments are all listed in `src/training_args.py`, you can set pre-training hyperparameters to your  need.
 
 ## Usage for protein-related tasks
 <span id="usage-for-protein-related-tasks"></span>
