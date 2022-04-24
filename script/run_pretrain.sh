@@ -1,14 +1,5 @@
 #!/bin/bash
 
-#SBATCH -N 1 
-#SBATCH -n 20
-#SBATCH -M priv 
-#SBATCH -p priv_para
-#SBATCH --gres=gpu:4
-#SBATCH --no-requeue
-
-source activate liangxz38
-
 OUTPUT_DIR=data/output_data/filtered_ke_text
 PRETRAIN_DATA_DIR=data/pretrain_data/pretrain_data_2021
 
