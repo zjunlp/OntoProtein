@@ -177,7 +177,7 @@ class ProteinGoDataset(Dataset):
         # TODO: now adopt simple strategy of negative sampling. Wait to update.
         # for negative sample.
         self.protein_heads, self.pg_relations, self.go_tails, self.true_tail, self.true_head = get_triplet_data(
-            data_path=os.path.join(self.data_dir, 'protein_go_train_triplet_filtered.txt')
+            data_path=os.path.join(self.data_dir, 'protein_go_train_triplet.txt')
         )
         
     def __getitem__(self, index):
