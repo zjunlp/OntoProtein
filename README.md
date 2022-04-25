@@ -86,7 +86,7 @@ python tools/gen_onto_protein_data.py
 
 ### Downstream task data
 <span id="downstream-task-data"></span>
-Our experiments involved with several protein-related downstream tasks. [[Download datasets]](https://drive.google.com/file/d/1elanRIPuYEMgY749ZwrlBPRKOTPaoRQ_/view)
+Our experiments involved with several protein-related downstream tasks. [[Download datasets]](https://drive.google.com/file/d/12d5wzNcuPxPyW8KIzwmvGg2dOKo0K0ag/view?usp=sharing)
 
 ## Protein pre-training model
 <span id="protein-pre-training-model"></span>
