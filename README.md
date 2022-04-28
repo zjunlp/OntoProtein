@@ -66,7 +66,7 @@ For pretraining OntoProtein, fine-tuning on protein-related tasks and inference,
 <span id="pre-training-data"></span>
 To incorporate Gene Ontology knowledge into language models and train OntoProtein, we construct [ProteinKG25](https://zjunlp.github.io/project/ProteinKG25/), a large-scale KG dataset with aligned descriptions and protein sequences respectively to GO terms and protein entities. There have two approach to acquire the pre-training data: 1) download our prepared data **ProteinKG25**, 2) generate your own pre-training data.
 
-![times](resources/img/times.png)
+<div align=center><img src="resources/img/times.png" width="50%" height="50%" /></div>
 
 #### Download released data
 
