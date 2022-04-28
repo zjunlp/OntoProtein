@@ -121,7 +121,7 @@ The shell files of training and evaluation for every task are provided in `scrip
 Running shell files: `bash script/run_{task}.sh`, and the contents of shell files are as follow:
 
 ```shell
-sh run_main.sh \
+bash run_main.sh \
     --model model_data/ProtBertModel \
     --output_file ss3-ProtBert \
     --task_name ss3 \
