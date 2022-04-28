@@ -33,13 +33,26 @@ To run our code, please install dependency packages for related steps.
 <span id="environment-for-pre-training-data-generation"></span>
 python3.8 / biopython 1.37 / goatools
 
+For extracting the definition of the GO term, we motified the code in `goatools` library. The changes in `goatools.obo_parser` are as follows:
+
+```python
+# line 132
+elif line[:5] == "def: ":
+    rec_curr.definition = line[5:]
+
+# line 169
+self.definition = ""
+```
+
 ### Environment for OntoProtein pre-training
 <span id="environment-for-ontoprotein-pre-training"></span>
 python3.8 / pytorch 1.9 / transformer 4.5.1+ / deepspeed 0.5.1/ lmdb / 
 
 ### Environment for protein-related tasks
 <span id="environment-for-protein-related-tasks"></span>
-python3.8 / pytorch 1.9 / transformer 4.5.1+ / lmdb
+python3.8 / pytorch 1.9 / transformer 4.5.1+ / lmdb / tape_proteins
+
+Specially, in library `tape_proteins`, it only implements the calculation of metric `P@L` for the contact prediction task. So, for reporting the metrics P@K taking different K values, in which the metrics P@K are precisions for the top K contacts, we made some changes in the library. Detailed changes could be seen in [[isssue #8]](https://github.com/zjunlp/OntoProtein/issues/8#issuecomment-1109975025) 
 
 **Note:** environments configurations of some baseline models or methods in our experiments, e.g. BLAST, DeepGraphGO, we provide related links to configurate as follows:
 
