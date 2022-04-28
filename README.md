@@ -139,7 +139,7 @@ sh run_main.sh \
 Arguments for the training and evalution script are as follows,
 
 - `--task_name`: Specify which task to evaluate on, and now the script supports `{ss3, ss8, contact, remote_homology, fluorescence, stability}` tasks;
-- `--model`: The name or path of a protein pre-trained checkpoint. You can directly use the protein pre-trained model, e.g., `Rostlab/prot_bert_bfd` or `zjukg/OntoProtein` if you want to finetune the pretrained model on downstream tasks.
+- `--model`: The name or path of a protein pre-trained checkpoint.
 - `--output_file`: The path of the fine-tuned checkpoint saved.
 - `--do_train`: Specify if you want to finetune the pretrained model on downstream tasks.
 - `--epoch`: Epochs for training model.
