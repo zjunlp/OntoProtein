@@ -112,9 +112,7 @@ We have released the checkpoint of pretrained model on the model library of `Hug
 
 ### Running examples
 
-The shell files of training and evaluation for every task are provided in `script/` , and could directly run.
-
-Also, you can utilize the running codes `run_downstream.py` , and write your shell files according to your need:
+The shell files of training and evaluation for every task are provided in `script/` , and could directly run. Also, you can utilize the running codes `run_downstream.py` , and write your shell files according to your need:
 
 - `run_downstream.py`: support `{ss3, ss8, contact, remote_homology, fluorescence, stability}` tasks;
 
@@ -124,7 +122,7 @@ Running shell files: `bash script/run_{task}.sh`, and the contents of shell file
 
 ```shell
 sh run_main.sh \
-    --model ./model/ss3/ProtBertModel \
+    --model model_data/ProtBertModel \
     --output_file ss3-ProtBert \
     --task_name ss3 \
     --do_train True \
@@ -138,35 +136,20 @@ sh run_main.sh \
     --frozen_bert False
 ```
 
-You can set more detailed parameters in run_main.sh. The details of main.sh are as follows:
+Arguments for the training and evalution script are as follows,
 
-```shell
-LR=3e-5
-SEED=3
-DATA_DIR=data/datasets
-OUTPUT_DIR=data/output_data/$TASK_NAME-$SEED-$OI
+- `--task_name`: Specify which task to evaluate on, and now the script supports `{ss3, ss8, contact, remote_homology, fluorescence, stability}` tasks;
+- `--model`: The name or path of a protein pre-trained checkpoint. You can directly use the protein pre-trained model, e.g., `Rostlab/prot_bert_bfd` or `zjukg/OntoProtein` if you want to finetune the pretrained model on downstream tasks.
+- `--output_file`: The path of the fine-tuned checkpoint saved.
+- `--do_train`: Specify if you want to finetune the pretrained model on downstream tasks.
+- `--epoch`: Epochs for training model.
+- `--optimizer`: The optimizer to use, e.g., `AdamW`.
+- `--per_device_batch_size`: Batch size per GPU.
+- `--gradient_accumulation_steps`: The number of gradient accumulation steps.
+- `--warmup_ratio`: Ratio of total training steps used for a linear warmup from 0 to `learning_rate`.
+- `--frozen_bert`: Specify if you want to frozen the encoder in the pretrained model.
 
-python run_downstream.py \
-  --task_name $TASK_NAME \
-  --data_dir $DATA_DIR \
-  --do_train $DO_TRAIN \
-  --do_predict True \
-  --model_name_or_path $MODEL \
-  --per_device_train_batch_size $BS \
-  --per_device_eval_batch_size $EB \
-  --gradient_accumulation_steps $GS \
-  --learning_rate $LR \
-  --num_train_epochs $EPOCHS \
-  --warmup_ratio $WR \
-  --logging_steps $ES \
-  --eval_steps $ES \
-  --output_dir $OUTPUT_DIR \
-  --seed $SEED \
-  --optimizer $OPTIMIZER \
-  --frozen_bert $FROZEN_BERT \
-  --mean_output $MEAN_OUTPUT \
-
-```
+Additionally, you can set more detailed parameters in `run_main.sh`.
 
 **Notice: the best checkpoint is saved in** `OUTPUT_DIR/`.
 
