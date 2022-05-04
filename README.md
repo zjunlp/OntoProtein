@@ -155,10 +155,12 @@ Additionally, you can set more detailed parameters in `run_main.sh`.
 
 ## How to Cite
 ```
-@article{zhang2022ontoprotein,
-  title={OntoProtein: Protein Pretraining With Gene Ontology Embedding},
-  author={Zhang, Ningyu and Bi, Zhen and Liang, Xiaozhuan and Cheng, Siyuan and Hong, Haosen and Deng, Shumin and Lian, Jiazhang and Zhang, Qiang and Chen, Huajun},
-  journal={arXiv preprint arXiv:2201.11147},
-  year={2022}
+@inproceedings{
+zhang2022ontoprotein,
+title={OntoProtein: Protein Pretraining With Gene Ontology Embedding},
+author={Ningyu Zhang and Zhen Bi and Xiaozhuan Liang and Siyuan Cheng and Haosen Hong and Shumin Deng and Qiang Zhang and Jiazhang Lian and Huajun Chen},
+booktitle={International Conference on Learning Representations},
+year={2022},
+url={https://openreview.net/forum?id=yfe1VMYAXa4}
 }
 ```
