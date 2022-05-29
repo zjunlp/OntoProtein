@@ -145,7 +145,7 @@ class BertForSequenceClassification2(BertPreTrainedModel):
 
 
 def load_adam_optimizer_and_scheduler(model, args, train_dataset):
-    optimizer = torch.optim.Adam(model.parameters())
+    optimizer = torch.optim.Adam(model.parameters(), lr=args.learning_rate)
 
     total_steps = len(
         train_dataset) // args.train_batch_size // args.gradient_accumulation_steps * args.num_train_epochs
