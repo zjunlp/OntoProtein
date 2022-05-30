@@ -6,7 +6,7 @@ nohup sh run_main.sh \
       --task_name fluorescence \
       --do_train True \
       --epoch 15 \
-      --mean_output False \
+      --mean_output True \
       --optimizer Adam \
       --per_device_batch_size 4 \
       --gradient_accumulation_steps 16 \
