@@ -35,7 +35,7 @@ KE_EMBEDDING_SIZE=512
 DOUBLE_ENTITY_EMBEDDING_SIZE=false
 
 # Train
-MAX_STEPS=500000
+MAX_STEPS=60000
 BATCH_SIZE=4
 
 PROTEIN_SEQ_BATCH_SIZE=8
@@ -49,14 +49,14 @@ OPTIMIZE_MEMORY=true
 # MLM Loss
 MLM_LAMBDA=1.0
 MLM_LEARNING_RATE=1e-5
-LM_WARMUP_RATIO=0.1
+LM_WARMUP_STEPS=50000
 
 # KE Loss
 KE_LAMBDA=1.0
 KE_LEARNING_RATE=2e-5
 KE_MAX_SCORE=12.0
 KE_SCORE_FN='transE'
-KE_WARMUP_RATIO=0.1
+KE_WARMUP_STEPS=50000
 
 
 deepspeed --num_gpus=4 run_pretrain.py \
@@ -95,8 +95,8 @@ deepspeed --num_gpus=4 run_pretrain.py \
   --lr_scheduler_type $SCHEDULER_TYPE \
   --mlm_lambda $MLM_LAMBDA \
   --lm_learning_rate $MLM_LEARNING_RATE \
-  --lm_warmup_ratio $LM_WARMUP_RATIO \
-  --ke_warmup_ratio $KE_WARMUP_RATIO \
+  --lm_warmup_steps $LM_WARMUP_STEPS \
+  --ke_warmup_steps $KE_WARMUP_STEPS \
   --ke_lambda $KE_LAMBDA \
   --ke_learning_rate $KE_LEARNING_RATE \
   --ke_max_score $KE_MAX_SCORE \
