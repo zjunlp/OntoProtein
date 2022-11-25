@@ -6,7 +6,7 @@ nohup sh run_main.sh \
       --output_file remote_homology-ProtBert \
       --task_name remote_homology \
       --do_train False \
-      --epoch 20 \
+      --epoch 10 \
       --mean_output True \
       --optimizer AdamW \
       --per_device_batch_size 8 \
