@@ -1,11 +1,12 @@
 cd ../
 
+# Training on 1 v100 GPU
 nohup sh run_main.sh \
       --model ./model/transformers/ProtBert \
       --output_file fluorescence-ProtBert \
       --task_name fluorescence \
       --do_train True \
-      --epoch 15 \
+      --epoch 25 \
       --mean_output True \
       --optimizer Adam \
       --per_device_batch_size 4 \
