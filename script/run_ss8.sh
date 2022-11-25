@@ -1,5 +1,6 @@
 cd ../
 
+# Training on 2 v100s
 nohup sh run_main.sh \
       --model ./model/transformers/ProtBert \
       --output_file ss8-ProtBert \
@@ -8,7 +9,7 @@ nohup sh run_main.sh \
       --do_train True \
       --optimizer AdamW \
       --per_device_batch_size 2 \
-      --gradient_accumulation_steps 16 \
+      --gradient_accumulation_steps 8 \
       --eval_step 100 \
       --eval_batchsize 4 \
       --warmup_ratio 0.08 \
