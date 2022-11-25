@@ -1,5 +1,6 @@
 cd ../
 
+# Training on 2 v100s
 nohup sh run_main.sh \
       --model ./model/ss3/ProtBertModel \
       --output_file ss3-ProtBert \
