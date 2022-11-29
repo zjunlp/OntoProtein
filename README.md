@@ -108,7 +108,7 @@ You can pre-training your own OntoProtein based above pretraining dataset. Befor
 ## Usage for protein-related tasks
 <span id="usage-for-protein-related-tasks"></span>
 
-We have released the checkpoint of pretrained model on the model library of `Hugging Face`. [[Download model]](https://huggingface.co/zjukg/OntoProtein).
+We have released the checkpoint of pretrained model on the model library of `Hugging Face`. [[Download model]](https://huggingface.co/zjunlp/OntoProtein).
 
 ### Running examples
 
