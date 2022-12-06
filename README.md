@@ -1,6 +1,7 @@
 # OntoProtein
 
 This is the implement of the ICLR2022 paper "[OntoProtein: Protein Pretraining With Ontology Embedding](https://arxiv.org/pdf/2201.11147.pdf)". OntoProtein is an effective method that make use of structure in GO (Gene Ontology) into text-enhanced protein pre-training model.
+- ❗NOTE: We provide a paper-list at [https://github.com/zjunlp/NLP4Science_Papers](https://github.com/zjunlp/NLP4Science_Papers).
 
 <div align=center><img src="resources/img/model.png" width="80%" height="80%" /></div>
 
